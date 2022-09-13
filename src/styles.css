@@ -8,6 +8,19 @@
   box-sizing: border-box;
 }
 
+:root {
+  /* ### Neutral */
+
+  --almostwhite: hsl(0, 0%, 98%);
+  --mediumgray: hsl(0, 0%, 41%);
+  --almostblack: hsl(0, 0%, 8%);
+}
+
+body {
+  font-size: 18px;
+  font-family: "Epilogue", sans-serif;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
