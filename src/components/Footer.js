@@ -11,7 +11,7 @@ export default function Footer() {
       </a>
       . Coded by{" "}
       <a href="https://leskim.github.io/myweb/" rel="noreferrer">
-        YLesley Kimutai
+        Lesley Kimutai
       </a>
       .
     </footer>
