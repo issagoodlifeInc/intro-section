@@ -2,7 +2,7 @@
 *::before,
 *::after {
   margin: 0;
-  padding: 0;
+  /* padding: 0; */
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
@@ -14,11 +14,13 @@
   --almostwhite: hsl(0, 0%, 98%);
   --mediumgray: hsl(0, 0%, 41%);
   --almostblack: hsl(0, 0%, 8%);
+  --white: hsl(0, 0%, 100%);
 }
 
 body {
   font-size: 18px;
   font-family: "Epilogue", sans-serif;
+  background: var(--almostwhite);
 }
 
 .attribution {

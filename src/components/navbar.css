@@ -1,15 +1,43 @@
 a {
   color: var(--mediumgray);
-  text-decoration: none;
 }
 
 nav {
+  font-size: 1rem;
   padding: 20px;
-  /* display: flex; */
-  /* justify-content: space-between; */
+  display: grid;
+  grid-template-columns: 0.2fr 3fr;
 }
 
 button {
   border: none;
   background: none;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-list {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-items_main {
+  position: relative;
+}
+
+.nav-list_secondary {
+  position: absolute;
+  top: 2rem;
+  background: var(--white);
+  padding: 20px 15px;
+  border-radius: 5px;
+  box-shadow: 1px 2px 10px var(--almostblack);
+  display: none;
+}
+
+.nav-item_secondary {
+  padding: 0.3rem 0;
 }

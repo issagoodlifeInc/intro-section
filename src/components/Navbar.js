@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from "react";
 import "./navbar.css";
 
@@ -33,6 +34,11 @@ export default function Navbar() {
     setChangeHamburger(!changeHamburger);
   };
 
+  // Show Dropdown Nav
+  const showDropDown = (e) => {
+    console.log(e);
+  };
+
   return (
     <nav>
       {/* Logo */}
@@ -53,10 +59,10 @@ export default function Navbar() {
 
       {/* Navigation Part */}
 
-      <div className="nav">
+      <div className="nav" id="nav">
         <ul className="nav-list">
           <li className="nav-item nav-items_main">
-            <a href="" className="nav-link">
+            <a onClick={showDropDown} href="" className="nav-link">
               Features
               <img src={arrowDown} alt="arrow" />
             </a>
@@ -84,7 +90,7 @@ export default function Navbar() {
             </ul>
           </li>
           <li className="nav-item nav-items_main">
-            <a href="" className="nav-link">
+            <a onClick={showDropDown} href="" className="nav-link">
               Company
               <img src={arrowDown} alt="arrow" />
             </a>
