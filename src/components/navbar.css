@@ -38,6 +38,14 @@ button {
   display: none;
 }
 
+.arrow {
+  padding-left: 0.4rem;
+}
+
+.nav-list_secondary.open {
+  display: block;
+}
+
 .nav-item_secondary {
   padding: 0.3rem 0;
 }

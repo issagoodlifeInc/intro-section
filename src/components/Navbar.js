@@ -36,7 +36,8 @@ export default function Navbar() {
 
   // Show Dropdown Nav
   const showDropDown = (e) => {
-    console.log(e);
+    console.log(e.target);
+    console.log("el");
   };
 
   return (
@@ -64,7 +65,7 @@ export default function Navbar() {
           <li className="nav-item nav-items_main">
             <a onClick={showDropDown} href="" className="nav-link">
               Features
-              <img src={arrowDown} alt="arrow" />
+              <img className="arrow" src={arrowDown} alt="arrow" />
             </a>
             <ul className="nav-list_secondary">
               <li className="nav-item nav-item_secondary">
@@ -92,7 +93,7 @@ export default function Navbar() {
           <li className="nav-item nav-items_main">
             <a onClick={showDropDown} href="" className="nav-link">
               Company
-              <img src={arrowDown} alt="arrow" />
+              <img className="arrow" src={arrowDown} alt="arrow" />
             </a>
             <ul className="nav-list_secondary">
               <li className="nav-item nav-item_secondary">
