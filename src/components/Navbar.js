@@ -24,14 +24,20 @@ export default function Navbar() {
   // Width of small screens
   const smallerScreens = 620;
 
+  // Mobile Navigation
+  const navDropDown = document.getElementById("nav");
+  console.log(navDropDown);
+
   // Open Hamburger
   const openMenu = () => {
     setChangeHamburger(!changeHamburger);
+    navDropDown.classList.add("mobile");
   };
 
   // Closed Hamburger menu
   const closeMenu = () => {
     setChangeHamburger(!changeHamburger);
+    navDropDown.classList.remove("mobile");
   };
 
   // Show Dropdown Nav

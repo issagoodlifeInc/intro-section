@@ -23,10 +23,58 @@ body {
   background: var(--almostwhite);
 }
 
+.main--img img {
+  width: 100%;
+}
+
+.main--content {
+  width: 90%;
+  margin: 2.5rem auto;
+}
+
+.main--title {
+  font-size: clamp(2rem, 9vw, 4rem);
+}
+
+.main--text {
+  text-align: center;
+  color: var(--mediumgray);
+  line-height: 1.5;
+  padding: 1.5rem 0;
+}
+
+.btn-learn {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1rem;
+  background: var(--almostblack);
+  padding: 1rem 1.5rem;
+  border-radius: 15px;
+  color: var(--white);
+  display: block;
+  margin: 0 auto;
+}
+
+.main-links {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.2rem;
+  margin-inline: auto;
+  margin-top: 2rem;
+}
+
+.links img {
+  width: 70px;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+.attribution a:hover {
+  color: var(--almostblack);
 }
