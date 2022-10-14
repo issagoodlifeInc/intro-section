@@ -33,7 +33,7 @@ body {
 }
 
 .main--title {
-  font-size: clamp(2rem, 9vw, 4rem);
+  font-size: clamp(2rem, 7vw, 4rem);
 }
 
 .main--text {
@@ -53,10 +53,16 @@ body {
   color: var(--white);
   display: block;
   margin: 0 auto;
+  transition: all ease-in 0.2s;
+}
+.btn-learn:hover {
+  color: var(--almostblack);
+  background: var(--white);
+  border: 1px solid var(--almostblack);
+  cursor: pointer;
 }
 
 .main-links {
-  width: 90%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0.2rem;
@@ -77,4 +83,25 @@ body {
 }
 .attribution a:hover {
   color: var(--almostblack);
+}
+
+@media only screen and (min-width: 620px) {
+  main {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 95%;
+    max-width: 1000px;
+    margin: 2rem auto;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .main--content {
+    width: 50%;
+    max-width: 430px;
+    align-self: end;
+  }
+  .main--img {
+    width: 45%;
+  }
 }
