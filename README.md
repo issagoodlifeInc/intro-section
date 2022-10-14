@@ -40,7 +40,7 @@ Laptop View:-
 ### Links
 
 - Solution URL: [Github Link](https://github.com/issagoodlifeInc/intro-section.git)
-- Live Site URL: [Intro--Sec Link](https://your-live-site-url.com)
+- Live Site URL: [Intro--Sec Link](https://intro-secwnav.netlify.app/)
 
 ## My process
 
