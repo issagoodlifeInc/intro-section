@@ -26,7 +26,8 @@ export default function Navbar() {
 
   // Mobile Navigation
   const navDropDown = document.getElementById("nav");
-  console.log(navDropDown);
+  const dropDownNav = document.querySelectorAll(".nav-list_secondary");
+  console.log(dropDownNav[1]);
 
   // Open Hamburger
   const openMenu = () => {
@@ -41,9 +42,8 @@ export default function Navbar() {
   };
 
   // Show Dropdown Nav
-  const showDropDown = (e) => {
-    console.log(e.target);
-    console.log("el");
+  const showDropDown = () => {
+    dropDownNav[2].classList.toggle("open");
   };
 
   return (

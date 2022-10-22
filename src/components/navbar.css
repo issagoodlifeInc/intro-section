@@ -50,12 +50,7 @@ nav button {
 }
 
 .nav-list_secondary {
-  position: absolute;
-  top: 2rem;
-  background: var(--white);
   padding: 20px 15px;
-  border-radius: 5px;
-  box-shadow: 1px 2px 10px var(--almostblack);
   display: none;
 }
 
@@ -66,6 +61,20 @@ nav button {
 @media only screen and (max-width: 620px) {
   .nav {
     display: none;
+  }
+  .nav-item_secondary .nav-link {
+    padding-block: 0.7rem;
+  }
+}
+
+@media only screen and (min-width: 620px) {
+  .nav-list_secondary {
+    position: absolute;
+    top: 2rem;
+    background: var(--white);
+    padding: 20px 15px;
+    border-radius: 5px;
+    box-shadow: 1px 2px 10px var(--almostblack);
   }
 }
 

@@ -36,8 +36,12 @@ body {
   font-size: clamp(2rem, 7vw, 4rem);
 }
 
+.main--title,
 .main--text {
   text-align: center;
+}
+
+.main--text {
   color: var(--mediumgray);
   line-height: 1.5;
   padding: 1.5rem 0;
@@ -94,6 +98,10 @@ body {
     margin: 2rem auto;
     align-items: center;
     gap: 1rem;
+  }
+
+  .main--title {
+    text-align: left;
   }
 
   .main--content {
