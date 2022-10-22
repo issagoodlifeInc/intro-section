@@ -41,12 +41,26 @@ nav button {
 
 .nav-btns .btn-register {
   border: 1px solid var(--mediumgray);
-  padding: 0.4rem 0.7rem;
+  padding: 0.4rem 1rem;
   border-radius: 10px;
 }
 
 .nav-btns .btn-register:hover {
   border: 1px solid var(--almostblack);
+}
+
+.nav-list_secondary {
+  position: absolute;
+  top: 2rem;
+  background: var(--white);
+  padding: 20px 15px;
+  border-radius: 5px;
+  box-shadow: 1px 2px 10px var(--almostblack);
+  display: none;
+}
+
+.nav-list_secondary.open {
+  display: block;
 }
 
 @media only screen and (max-width: 620px) {
@@ -57,9 +71,10 @@ nav button {
 
 .nav.mobile {
   align-items: left;
-  justify-content: center;
+  justify-content: flex-start;
   display: flex;
   gap: 5px;
+  padding-top: 4rem;
   flex-direction: column;
   position: absolute;
   bottom: 0;
@@ -83,22 +98,23 @@ nav button {
   position: relative;
 }
 
-.nav-list_secondary {
-  position: absolute;
-  top: 2rem;
-  background: var(--white);
-  padding: 20px 15px;
-  border-radius: 5px;
-  box-shadow: 1px 2px 10px var(--almostblack);
-  display: none;
+.nav.mobile .nav-btns {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.nav-btns .btn-register {
+  text-align: center;
+  padding-block: 0.8rem;
+  width: 70%;
 }
 
 .arrow {
   padding-left: 0.4rem;
-}
-
-.nav-list_secondary.open {
-  display: block;
 }
 
 .nav-item_secondary {
