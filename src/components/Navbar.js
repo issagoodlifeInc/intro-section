@@ -11,7 +11,7 @@ import arrowDown from "../images/icon-arrow-down.svg";
 export default function Navbar() {
   const [width, setWidth] = useState(window.innerWidth);
   const [changeHamburger, setChangeHamburger] = useState(false);
-  const [isActive, setIsActive] = useState();
+  const [isActive, setIsActive] = useState("");
 
   const getWidth = () => {
     // Geting the window width value saved to state
@@ -43,6 +43,9 @@ export default function Navbar() {
   // Show Dropdown Nav
   const showDropDown = (e) => {
     setIsActive(e.target.textContent);
+    if (isActive !== "") {
+      setIsActive("");
+    }
   };
 
   return (
