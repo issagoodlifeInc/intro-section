@@ -27,7 +27,6 @@ export default function Navbar() {
 
   // Mobile Navigation
   const navDropDown = document.getElementById("nav");
-  const dropDownNavs = document.querySelectorAll(".nav-link_main");
 
   // Open Hamburger
   const openMenu = () => {
@@ -75,7 +74,11 @@ export default function Navbar() {
               className="nav-link nav-link_main"
             >
               Features
-              <img className="arrow" src={arrowDown} alt="arrow" />
+              <img
+                className="arrow"
+                src={`${isActive === "Features" ? arrowUp : arrowDown}`}
+                alt="arrow"
+              />
             </a>
             <ul
               className={`nav-list_secondary ${
@@ -111,7 +114,11 @@ export default function Navbar() {
               className="nav-link nav-link_main"
             >
               Company
-              <img className="arrow" src={arrowDown} alt="arrow" />
+              <img
+                className="arrow"
+                src={`${isActive === "Company" ? arrowUp : arrowDown}`}
+                alt="arrow"
+              />
             </a>
             <ul
               className={`nav-list_secondary ${

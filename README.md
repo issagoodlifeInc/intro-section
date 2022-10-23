@@ -4,17 +4,18 @@ This is a solution to the [Intro section with dropdown navigation challenge on F
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
+- [Frontend Mentor - Intro section with dropdown navigation solution](#frontend-mentor---intro-section-with-dropdown-navigation-solution)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+    - [What I learned](#what-i-learned)
+    - [Continued development](#continued-development)
+  - [Author](#author)
+  - [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -96,6 +97,50 @@ Laptop View:-
     </button>
   );
 }
+```
+
+- Showing dropdown links depending on the isActive state value
+
+```jsx
+
+ const [isActive, setIsActive] = useState();
+
+ <li className="nav-item nav-items_main">
+            <a
+              onClick={showDropDown}
+              href="#"
+              className="nav-link nav-link_main"
+            >
+              Features
+              <img className="arrow" src={`${isActive === "Features" ? arrowUp : arrowDown}`} alt="arrow" />
+            </a>
+            <ul
+              className={`nav-list_secondary ${
+                isActive === "Features" ? "open" : ""
+              }`}
+            >
+              <li className="nav-item nav-item_secondary">
+                <a href="#" className="nav-link">
+                  Todo List
+                </a>
+              </li>
+              <li className="nav-item nav-item_secondary">
+                <a href="#" className="nav-link">
+                  Calendar
+                </a>
+              </li>
+              <li className="nav-item nav-item_secondary">
+                <a href="#" className="nav-link">
+                  Reminders
+                </a>
+              </li>
+              <li className="nav-item nav-item_secondary">
+                <a href="#" className="nav-link">
+                  Planning
+                </a>
+              </li>
+            </ul>
+          </li>
 ```
 
 ### Continued development
