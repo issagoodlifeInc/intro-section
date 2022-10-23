@@ -11,6 +11,7 @@ import arrowDown from "../images/icon-arrow-down.svg";
 export default function Navbar() {
   const [width, setWidth] = useState(window.innerWidth);
   const [changeHamburger, setChangeHamburger] = useState(false);
+  const [isActive, setIsActive] = useState();
 
   const getWidth = () => {
     // Geting the window width value saved to state
@@ -26,8 +27,7 @@ export default function Navbar() {
 
   // Mobile Navigation
   const navDropDown = document.getElementById("nav");
-  const dropDownNav = document.querySelectorAll(".nav-list_secondary");
-  console.log(dropDownNav[1]);
+  const dropDownNavs = document.querySelectorAll(".nav-link_main");
 
   // Open Hamburger
   const openMenu = () => {
@@ -42,8 +42,8 @@ export default function Navbar() {
   };
 
   // Show Dropdown Nav
-  const showDropDown = () => {
-    dropDownNav[2].classList.toggle("open");
+  const showDropDown = (e) => {
+    setIsActive(e.target.textContent);
   };
 
   return (
@@ -69,73 +69,89 @@ export default function Navbar() {
       <div className="nav" id="nav">
         <ul className="nav-list">
           <li className="nav-item nav-items_main">
-            <a onClick={showDropDown} href="" className="nav-link">
+            <a
+              onClick={showDropDown}
+              href="#"
+              className="nav-link nav-link_main"
+            >
               Features
               <img className="arrow" src={arrowDown} alt="arrow" />
             </a>
-            <ul className="nav-list_secondary">
+            <ul
+              className={`nav-list_secondary ${
+                isActive === "Features" ? "open" : ""
+              }`}
+            >
               <li className="nav-item nav-item_secondary">
-                <a href="" className="nav-link">
+                <a href="#" className="nav-link">
                   Todo List
                 </a>
               </li>
               <li className="nav-item nav-item_secondary">
-                <a href="" className="nav-link">
+                <a href="#" className="nav-link">
                   Calendar
                 </a>
               </li>
               <li className="nav-item nav-item_secondary">
-                <a href="" className="nav-link">
+                <a href="#" className="nav-link">
                   Reminders
                 </a>
               </li>
               <li className="nav-item nav-item_secondary">
-                <a href="" className="nav-link">
+                <a href="#" className="nav-link">
                   Planning
                 </a>
               </li>
             </ul>
           </li>
           <li className="nav-item nav-items_main">
-            <a onClick={showDropDown} href="" className="nav-link">
+            <a
+              onClick={showDropDown}
+              href="#"
+              className="nav-link nav-link_main"
+            >
               Company
               <img className="arrow" src={arrowDown} alt="arrow" />
             </a>
-            <ul className="nav-list_secondary">
+            <ul
+              className={`nav-list_secondary ${
+                isActive === "Company" ? "open" : ""
+              }`}
+            >
               <li className="nav-item nav-item_secondary">
-                <a href="" className="nav-link">
+                <a href="#" className="nav-link">
                   History
                 </a>
               </li>
               <li className="nav-item nav-item_secondary">
-                <a href="" className="nav-link">
+                <a href="#" className="nav-link">
                   Our Team
                 </a>
               </li>
               <li className="nav-item nav-item_secondary">
-                <a href="" className="nav-link">
+                <a href="#" className="nav-link">
                   Blog
                 </a>
               </li>
             </ul>
           </li>
           <li className="nav-item">
-            <a href="" className="nav-link">
+            <a href="#" className="nav-link">
               Careers
             </a>
           </li>
           <li className="nav-item">
-            <a href="" className="nav-link">
+            <a href="#" className="nav-link">
               About
             </a>
           </li>
         </ul>
 
         <div className="nav-btns">
-          <a href="" className="nav-link nav-btn">
+          <a href="#" className="nav-link nav-btn">
             Login
           </a>
-          <a href="" className="nav-link nav-btn btn-register">
+          <a href="#" className="nav-link nav-btn btn-register">
             Register
           </a>
         </div>
