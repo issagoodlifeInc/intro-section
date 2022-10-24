@@ -9,7 +9,7 @@ a:hover {
 
 nav {
   font-size: 1rem;
-  padding: 20px;
+  padding: 2rem;
   display: grid;
   grid-template-columns: 0.2fr 3fr;
   max-width: 1500px;
@@ -50,12 +50,21 @@ nav button {
 }
 
 .nav-list_secondary {
-  padding: 20px 15px;
   display: none;
 }
 
 .nav-list_secondary.open {
+  max-height: fit-content;
   display: block;
+}
+
+.nav-item_secondary a {
+  display: inline-flex;
+  gap: 0.7rem;
+  align-items: center;
+}
+.nav-item_secondary img {
+  width: 1.15em;
 }
 
 @media only screen and (max-width: 620px) {
@@ -63,7 +72,8 @@ nav button {
     display: none;
   }
   .nav-item_secondary .nav-link {
-    padding-block: 0.7rem;
+    padding: 0;
+    padding-block: 0.2rem;
   }
 }
 
@@ -72,7 +82,7 @@ nav button {
     position: absolute;
     top: 2rem;
     background: var(--white);
-    padding: 20px 15px;
+    padding: 1.25rem;
     border-radius: 5px;
     box-shadow: 1px 2px 10px var(--almostblack);
   }
@@ -83,7 +93,7 @@ nav button {
   justify-content: flex-start;
   display: flex;
   gap: 5px;
-  padding-top: 4rem;
+  padding-top: 7rem;
   flex-direction: column;
   position: absolute;
   bottom: 0;
@@ -92,11 +102,17 @@ nav button {
   width: 65%;
   z-index: 2;
   background-color: var(--white);
+  transition: all 0.8s ease-in;
 }
 
 .nav.mobile .nav-list {
   display: flex;
   flex-direction: column;
+  gap: 1.2rem;
+}
+
+.nav.mobile .nav-item_secondary {
+  padding-block-start: 1rem;
 }
 
 .hamburger-open {

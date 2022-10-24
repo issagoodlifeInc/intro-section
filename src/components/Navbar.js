@@ -8,6 +8,11 @@ import hamburgerClose from "../images/icon-close-menu.svg";
 import arrowUp from "../images/icon-arrow-up.svg";
 import arrowDown from "../images/icon-arrow-down.svg";
 
+import todo from "../images/icon-todo.svg";
+import calendar from "../images/icon-calendar.svg";
+import reminder from "../images/icon-reminders.svg";
+import planning from "../images/icon-planning.svg";
+
 export default function Navbar() {
   const [width, setWidth] = useState(window.innerWidth);
   const [changeHamburger, setChangeHamburger] = useState(false);
@@ -90,21 +95,25 @@ export default function Navbar() {
             >
               <li className="nav-item nav-item_secondary">
                 <a href="#" className="nav-link">
+                  <img src={todo} alt="" aria-hidden="true" />
                   Todo List
                 </a>
               </li>
               <li className="nav-item nav-item_secondary">
                 <a href="#" className="nav-link">
+                  <img src={calendar} alt="" aria-hidden="true" />
                   Calendar
                 </a>
               </li>
               <li className="nav-item nav-item_secondary">
                 <a href="#" className="nav-link">
+                  <img src={reminder} alt="" aria-hidden="true" />
                   Reminders
                 </a>
               </li>
               <li className="nav-item nav-item_secondary">
                 <a href="#" className="nav-link">
+                  <img src={planning} alt="" aria-hidden="true" />
                   Planning
                 </a>
               </li>
